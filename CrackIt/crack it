@@ -1,0 +1,28 @@
+#!/bin/bash
+#!/bin/bash
+
+tput setaf 7;
+clear
+echo "       "
+echo " ____  ____ ____ ____ _  __   _ _____ _ "
+echo "/   _\/  __Y  _ Y   _Y |/ /  / Y__ __Y \ "
+echo "|  /  |  \/| / \|  / |   /   | | / \ | |"
+echo "|  \__|    / |-||  \_|   \   | | | | \_/"
+echo "\____/\_/\_\_/ \|____|_|\_\  \_/ \_/ (_)"
+echo $white "Welcome to Crack It!"
+echo $white "Created by: Muhammad Najwan [Malaysian Hacker]"
+echo "         "
+echo $yellow "1.Brute Force."
+echo $yellow "2.Dictionary."
+
+read -p '<Choose your cracking type> ' ct
+if [[ $ct == 1 ]]; then
+	cd brute
+	./1
+fi
+
+if [[ $ct == 2 ]]; then
+	cd dictionary
+	./2
+fi	
+

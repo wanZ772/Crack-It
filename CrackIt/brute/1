@@ -1,0 +1,25 @@
+#!/bin/sh
+
+#This colour
+white='\e[1;37m'
+yellow='\e[1;33m'
+red='\e[1;31m'
+clear
+echo " ____ ____ _    _____ _____   _________ ____ ____ _____   _     ____ ____ _____ "
+echo "/  __Y  __Y \ /Y__ __Y  __/  /    /  _ Y  __Y   _Y  __/  / \__/|  _ Y  _ Y  __/ "
+echo "| | //  \/| | || / \ |  \    |  __\ / \|  \/|  / |  \    | |\/|| / \| | \|  \   "
+echo "| |_\\\   |_/ \_ | | | |  /_   | |  | \_/|    /  \_|  /_   | |  || \_/| |_/|  /_  "
+echo "\____|_/\_\____/ \_/ \____\  \_/  \____|_/\_\____|____\  \_/  \|____|____|____\ "
+echo $white "Enter Your File Details:"
+read -p 'File Name: ' file
+read -p 'File Path: ' path
+read -p 'Password Type [Example> 1/a/A/aA1]: ' type
+read -p 'Password length:1-' length
+clear
+echo "Please wait while cracking . . ."
+fcrackzip -b -c "$type" -l 1-$length -u $path
+echo "         "
+echo $white "File: $file"
+echo $white 'Status:' $red 'successfuly cracked!'
+echo $white 'Spacial Thanks To: Muhammad Najwan.'
+echo $yellow '[Malaysian' $red 'Hacker]'

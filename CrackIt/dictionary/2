@@ -1,0 +1,28 @@
+#!/bin/sh
+
+
+
+#This colour
+white='\e[1;37m'
+red='\e[1;31m'
+yellow='\e[1;33m'
+
+
+echo "  "
+echo " ____ _ ____ _____ _ ____ _     ____ _______  _   _     ____ ____ _____"
+echo "/  _ Y Y   _Y__ __Y Y  _ Y \  /|  _ Y  __\  \//  / \__/|  _ Y  _ Y  __/"
+echo "| | \| |  /   / \ | | / \| |\ || / \|  \/|\  /   | |\/|| / \| | \|  \ "
+echo "| |_/| |  \_  | | | | \_/| | \|| |-||    // /    | |  || \_/| |_/|  /___ "
+echo "\____|_|____/ \_/ \_|____|_/  \|_/ \|_/\_Y_/     \_/  \|____|____|____\/ "
+echo $yellow "Enter your file detail:"
+read -p 'File Name: ' file
+read -p 'File Path: ' path
+read -p 'Dictionary Path: ' dp
+echo "      "
+echo $white 'Please wait while cracking .'
+fcrackzip -D -p $dp -u $path
+
+echo $red " File: $file"
+echo $red "Status: successfuly cracked!"
+echo $yellow "Special Thanks To: Muhammad Najwan."
+echo $white '[Malaysian Hacker]'
